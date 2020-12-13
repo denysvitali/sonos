@@ -1,6 +1,7 @@
 package sonos
 
 import (
+	"bytes"
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
@@ -289,7 +290,8 @@ func (z *ZonePlayer) GetZoneGroupState() (*ZoneGroupState, error) {
 		return nil, err
 	}
 	var zoneGroupState ZoneGroupState
-	err = xml.Unmarshal([]byte(zoneGroupStateResponse.ZoneGroupState), &zoneGroupState)
+	xmlDecoder := xml.NewDecoder(bytes.NewReader([]byte(zoneGroupStateResponse.ZoneGroupState)))
+	err = xmlDecoder.Decode(&zoneGroupState)
 	if err != nil {
 		return nil, err
 	}

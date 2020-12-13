@@ -1,2 +1,6 @@
+github.com/caglar10ur/sonos v0.0.0-20200904222616-0b796e956433 h1:GRFxJAH+EYd/iA7I5M5pNB22Vz1drqXfv0B+uoGOMLg=
+github.com/caglar10ur/sonos v0.0.0-20200904222616-0b796e956433/go.mod h1:Ra7dDphCxhw9HFw1xvHl99rrVmaIlYr8FlibhDgwbEw=
+github.com/denysvitali/sonos v0.0.0-20200904222616-0b796e956433 h1:IpLjsM13b+7mY87KhFZ/xpnfQbvdjmD+GUU+SMhR/VM=
+github.com/denysvitali/sonos v0.0.0-20200904222616-0b796e956433/go.mod h1:Ra7dDphCxhw9HFw1xvHl99rrVmaIlYr8FlibhDgwbEw=
 github.com/ianr0bkny/go-sonos v0.0.0-20171025003233-056585059953 h1:n9vfPPfv66b56toxNZk/w7VPSZ5eK/NxVrtRs1uptzo=
 github.com/ianr0bkny/go-sonos v0.0.0-20171025003233-056585059953/go.mod h1:uvzy1yuMP2e76h67o5rpaXPDPq4e/cUGU4RYkm9a0Js=

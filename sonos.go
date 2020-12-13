@@ -23,8 +23,8 @@ type Sonos struct {
 	found        chan *ZonePlayer
 }
 
-func NewSonos() (*Sonos, error) {
-	conn, err := net.ListenUDP("udp", &net.UDPAddr{IP: []byte{0, 0, 0, 0}, Port: 0, Zone: ""})
+func NewSonos(port uint16) (*Sonos, error) {
+	conn, err := net.ListenUDP("udp", &net.UDPAddr{IP: []byte{0, 0, 0, 0}, Port: int(port), Zone: ""})
 	if err != nil {
 		return nil, err
 	}
@@ -78,8 +78,8 @@ func (s *Sonos) Search() (chan *ZonePlayer, error) {
 	return s.found, nil
 }
 
-func FindRoom(room string, timeout time.Duration) (*ZonePlayer, error) {
-	son, err := NewSonos()
+func FindRoom(room string, port uint16, timeout time.Duration) (*ZonePlayer, error) {
+	son, err := NewSonos(port)
 	if err != nil {
 		return nil, err
 	}
